@@ -122,7 +122,10 @@ container.append(row);
 //main
 for (let index in data) {
   let singleObject = data[index];
+
   drawCards(singleObject);
+  chooseCardColor(singleObject);
+
 }
 
 
@@ -144,4 +147,17 @@ function drawCards(singObj) {
   </div>
   `;
   row.append(htmlCard);
+
+}
+
+
+//funzione che colora le icone nelle card in base all'attributo corrispondente nell'oggetto.
+function chooseCardColor(singObj) {
+  let icons = document.querySelectorAll('.card-icon > i');
+    for (let icon of icons) {
+      //verifico che l'icona non abbia già un attributo "style" onde evitare che venga sovrascritto
+      if (icon.getAttribute('style')===null || icon.getAttribute('style') === "") {
+        icon.style.color=`${singObj.color}`
+      }
+    }
 }
