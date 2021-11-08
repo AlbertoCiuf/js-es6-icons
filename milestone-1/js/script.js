@@ -112,3 +112,36 @@ const data = [
 		color: 'blue'
 	}
 ];
+
+const container = document.querySelector('main .container-fluid');
+const row = document.createElement('div');
+row.className='row row-cols-5';
+container.append(row);
+
+
+//main
+for (let index in data) {
+  let singleObject = data[index];
+  drawCards(singleObject);
+}
+
+
+
+
+//funzioni
+
+//funzione che genera dinamicamente le card, utilizzando i valori delle chiavi dell'oggetto passato come parametro
+function drawCards(singObj) {
+  const htmlCard = document.createElement('div');
+  htmlCard.className='ac-card';
+  htmlCard.innerHTML = 
+  `
+  <div class="card-icon">
+    <i class="${singObj.family} ${singObj.prefix}${singObj.name}"></i>
+  </div>
+  <div class="card-text text-uppercase">
+    ${singObj.name}
+  </div>
+  `;
+  row.append(htmlCard);
+}
