@@ -1,0 +1,58 @@
+body {
+  font-family: 'Rubik', sans-serif;;
+}
+
+header {
+  height: 140px;
+}
+
+header .header-top, header .header-bottom {
+height: 50%;
+}
+
+.header-top h1 {
+  color: #3AB2DE;
+  padding-top: 20px;
+  font-size: 50px;
+  font-family: 'Acme', sans-serif;
+  padding-left: 20px;
+}
+
+header .header-bottom {
+  background-color: #3AB2DE;
+}
+
+.header-bottom h2 {
+  font-size: 20px;
+  margin: 0 !important;
+  padding-right: 5px;
+}
+
+main {
+  height: calc(100vh - 140px);
+  background-color: #DDDDDD;
+}
+
+.ac-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: 250px;
+  height: 120px;
+  background-color: #F5F5F5;
+  border-radius: 15px;
+  margin: 50px 30px;
+  cursor: pointer;
+  transition: all .3s;
+}
+.ac-card:hover {
+  transform: scale(1.1);
+}
+
+
+
+.ac-card i {
+  font-size: 36px;
+}
